@@ -5,6 +5,7 @@ import AddRecipeForm from './components/AddRecipeForm'
 import RecipeDetails from './components/RecipeDetails'
 import EditRecipeForm from './components/EditRecipeForm'
 import DeleteRecipeButton from './components/DeleteRecipeButton'
+import SearchBar from './components/SearchBar';
 
 import './App.css'
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <Router>
       <div>
+        <SearchBar />
         <Routes>
           <Route path="/" element={<RecipeList />} />
           <Route path="/add-recipe" element={<AddRecipeForm />} />
