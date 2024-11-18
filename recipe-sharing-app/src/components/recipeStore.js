@@ -18,6 +18,7 @@ const useRecipeStore = create(set => ({
       recipe.cookingTime <= state.cookingTimeFilter
     )
   })),
+  setRecipes: (recipes) => set({ recipes }),
   addRecipe: (newRecipe) => set(state => ({ recipes: [...state.recipes, newRecipe] })),
   updateRecipe: (updatedRecipe) => set(state => ({
     recipes: state.recipes.map(recipe => (recipe.id === updatedRecipe.id ? updatedRecipe : recipe)),
