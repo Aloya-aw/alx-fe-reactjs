@@ -2,6 +2,13 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import TodoList from './TodoList';
+import UserGreeting from './UserGreeting';
+
+test('renders "Hello, User!"', () => {
+    render(<UserGreeting />);
+    const greetingElement = screen.getByText(/Hello, User!/i);
+    expect(greetingElement).toBeInTheDocument();
+  });
 
 test('renders initial todos', () => {
   render(<TodoList />);
