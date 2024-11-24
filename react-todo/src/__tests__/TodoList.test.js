@@ -15,8 +15,8 @@ test('adds a new todo', () => {
     const input = screen.getByRole('textbox');
     const button = screen.getByRole('button');
   
-    userEvent.type(input, 'New Todo');
-    userEvent.click(button);
+    fireEvent.change(input, { target: { value: 'New Todo' } });
+    fireEvent.click(button);
   
     const todoItems = screen.getAllByRole('listitem');
     expect(todoItems).toHaveLength(3);
