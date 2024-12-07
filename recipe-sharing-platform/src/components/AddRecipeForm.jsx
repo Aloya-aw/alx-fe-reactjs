@@ -4,7 +4,7 @@ const AddRecipeForm = () => {
   const [formData, setFormData] = useState({
     title: '',
     ingredients: '',
-    instructions: '',
+    steps: '',
   });
 
   const handleChange = (e) => {
@@ -17,19 +17,19 @@ const AddRecipeForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.title || !formData.ingredients || !formData.instructions) {
+    if (!formData.title || !formData.ingredients || !formData.steps) {
       alert('Please fill in all fields.');
       return;
     }
 
-    // Submit the form data to your backend here
-    console.log(formData); // Replace with your actual backend submission logic
+    // Submit the form data to the backend here
+    console.log(formData); // Replace with actual backend submission logic
 
     // Clear the form
     setFormData({
       title: '',
       ingredients: '',
-      instructions: '',
+      steps: '',
     });
   };
 
@@ -67,13 +67,13 @@ const AddRecipeForm = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="instructions" className="block text-sm font-medium text-gray-700">
-            Instructions
+          <label htmlFor="steps" className="block text-sm font-medium text-gray-700">
+            Steps
           </label>
           <textarea
-            id="instructions"
-            name="instructions"
-            value={formData.instructions}
+            id="steps"
+            name="steps"
+            value={formData.steps}
             onChange={handleChange}
             className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             required
