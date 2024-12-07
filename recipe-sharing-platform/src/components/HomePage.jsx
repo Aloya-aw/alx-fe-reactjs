@@ -6,7 +6,7 @@ const HomePage = () => {
   // Fetch recipe data on component mount
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('data.json'); // Replace with your data.json path
+      const response = await fetch('../data.json'); // Replace with your data.json path
       const data = await response.json();
       setRecipes(data);
     };
