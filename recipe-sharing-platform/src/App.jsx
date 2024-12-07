@@ -3,6 +3,7 @@ import './App.css'
 import HomePage from './components/HomePage'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import AddRecipeForm from './components/AddRecipeForm'
+import RecipeDetail from './components/RecipeDetail'
 
 function App() {
   return (
@@ -16,4 +17,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

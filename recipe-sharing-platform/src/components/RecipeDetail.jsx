@@ -7,7 +7,7 @@ const RecipeDetail = () => {
 
   useEffect(() => {
     const fetchRecipe = async () => {
-      const response = await fetch(`data.json`); // Adjust the path if needed
+      const response = await fetch(`../data.json`); // Adjust the path if needed
       const data = await response.json();
       const selectedRecipe = data.find(recipe => recipe.id === parseInt(id));
       setRecipe(selectedRecipe);
